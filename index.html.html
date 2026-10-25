@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Borrador de historia económica familiar: comparación de dos negocios de engorde de ganado alrededor de 1960 y en 2007.">
+  <title>Dos generaciones y una misma actividad | Historia económica familiar</title>
+  <style>
+    :root{--ink:#202a25;--muted:#5c6860;--paper:#fbfaf6;--panel:#fff;--green:#345c48;--green2:#91ad91;--gold:#d8ad62;--line:#dce2da;--soft:#edf2eb;--warn:#fff4df;--warnline:#bd8731;--link:#235b83;--max:1080px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.68 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:var(--link);text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    .wrap{width:min(var(--max),calc(100% - 36px));margin-inline:auto}
+    .topline{height:8px;background:linear-gradient(90deg,var(--green) 0 62%,var(--gold) 62% 100%)}
+    header{padding:64px 0 54px;background:var(--soft);border-bottom:1px solid var(--line)}
+    .eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:750;color:var(--green);margin:0 0 18px}
+    h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.035em;font-size:clamp(2.5rem,6vw,5rem);line-height:1.02;max-width:850px;margin:0 0 18px}
+    .subtitle{font-size:clamp(1.1rem,2.4vw,1.5rem);color:var(--muted);max-width:760px;margin:0}
+    .hero-meta{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px}
+    .pill{display:inline-block;border:1px solid #c8d4c7;border-radius:999px;padding:5px 12px;font-size:.85rem;color:#34483a;background:#fff}
+    nav{border-bottom:1px solid var(--line);background:rgba(251,250,246,.96)}
+    nav .wrap{display:flex;gap:20px;overflow-x:auto;padding-block:12px;white-space:nowrap}
+    nav a{font-size:.9rem;font-weight:650;text-decoration:none;color:var(--green)}
+    main{padding:18px 0 60px}
+    section{padding:32px 0;border-bottom:1px solid var(--line);scroll-margin-top:30px}
+    h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.16;margin:0 0 18px}
+    h3{font-size:1.14rem;line-height:1.35;margin:0 0 8px}
+    p{max-width:850px;margin:0 0 16px}
+    .lede{font-size:1.12rem;max-width:900px}
+    .note{padding:16px 18px;background:var(--warn);border-left:4px solid var(--warnline);border-radius:0 8px 8px 0;margin:20px 0;max-width:900px}
+    .softnote{padding:16px 18px;background:var(--soft);border-radius:8px;margin:20px 0;max-width:900px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:22px 0}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px;min-width:0}
+    .card p:last-child{margin-bottom:0}
+    .metric{font-size:2rem;line-height:1.1;font-weight:750;color:var(--green);margin:6px 0 10px}
+    .muted{color:var(--muted);font-size:.92rem}
+    .chart-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px;margin:20px 0}
+    .chart-card h3{font-size:1.2rem}
+    .chart-subtitle{color:var(--muted);font-size:.9rem;margin-bottom:12px}
+    .chart{display:block;width:100%;height:auto;max-height:300px}
+    .chart text{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--ink)}
+    .chart .axis{stroke:#cbd3cb;stroke-width:1}
+    .chart .bar-a{fill:var(--green)} .chart .bar-b{fill:var(--gold)}
+    .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.88rem;color:var(--muted);margin-top:8px}
+    .swatch{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:middle}
+    table{border-collapse:collapse;width:100%;margin:18px 0;font-size:.94rem}
+    th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+    th{background:var(--soft);font-weight:700}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:white}
+    .table-wrap table{margin:0;min-width:520px}
+    .equation{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f0f2ee;padding:12px 14px;border-radius:8px;overflow-wrap:anywhere;max-width:900px}
+    .source-list li{margin:0 0 12px;max-width:900px}
+    footer{padding:26px 0 44px;color:var(--muted);font-size:.9rem}
+    .smallcaps{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:750}
+    @media(max-width:700px){body{font-size:16px}.wrap{width:min(var(--max),calc(100% - 24px))}header{padding:44px 0 38px}.grid{grid-template-columns:1fr}.card,.chart-card{padding:17px}section{padding:27px 0}nav .wrap{gap:15px}}
+    @media print{nav{display:none}body{background:#fff;font-size:11pt}.wrap{width:100%}.card,.chart-card{break-inside:avoid}a{color:inherit}}
+  </style>
+</head>
+<body>
+  <div class="topline" aria-hidden="true"></div>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Historia Económica de Colombia · Borrador para coevaluación</p>
+      <h1>Dos generaciones y una misma actividad</h1>
+      <p class="subtitle">La ganadería familiar entre 1960 y 2007: cómo se organizaron dos negocios de engorde en momentos distintos.</p>
+      <div class="hero-meta"><span class="pill">Historia oral familiar</span><span class="pill">Resultados preliminares</span><span class="pill">1960 aprox. – 2007</span></div>
+    </div>
+  </header>
+  <nav aria-label="Navegación de la página"><div class="wrap">
+    <a href="#pregunta">Pregunta</a><a href="#comparacion">Los dos negocios</a><a href="#graficas">Gráficas</a><a href="#calculo">Cálculo</a><a href="#contexto">Contexto histórico</a><a href="#fuentes">Fuentes y método</a>
+  </div></nav>
+  <main class="wrap">
+    <section id="pregunta">
+      <p class="smallcaps">01 · Punto de partida</p>
+      <h2>¿Qué cambió de una generación a otra?</h2>
+      <p class="lede">Mi abuelo y mi papá tuvieron negocios de ganadería en dos momentos distintos. Mi abuelo se dedicó a esta actividad alrededor de 1960, en una finca familiar en el Cauca. En 2007, mi papá engordó ganado en Jamundí mientras trabajaba como ejecutivo en una empresa de la industria gráfica.</p>
+      <p>Los dos usaron la ganadería como una fuente de ingresos para sus familias, pero organizaron sus negocios de forma diferente. Mi abuelo criaba buena parte de sus animales y trabajaba en una finca propia. Mi papá compraba animales jóvenes para engordarlos y desarrollaba el negocio en un terreno arrendado.</p>
+      <p>La pregunta que guía este trabajo es: <strong>¿cómo cambió la forma de hacer ganadería dentro de mi familia entre 1960 y 2007?</strong> Comparo la escala, el peso de venta, la duración del ciclo, el uso de la tierra y el lugar del negocio dentro de los ingresos familiares. Estos dos casos no representan a todo el sector ganadero colombiano; permiten estudiar una experiencia familiar y contrastarla con fuentes históricas.</p>
+      <div class="note"><strong>Alcance de la evidencia.</strong> Las cifras familiares son aproximaciones recordadas en entrevistas, no registros contables. Las gráficas comparan lo que se reportó, pero no prueban por sí solas una tendencia de toda la ganadería colombiana.</div>
+    </section>
+
+    <section id="comparacion">
+      <p class="smallcaps">02 · La comparación</p>
+      <h2>Dos formas de organizar el negocio</h2>
+      <div class="grid">
+        <article class="card">
+          <p class="smallcaps">Alrededor de 1960</p><h3>El negocio de mi abuelo</h3>
+          <div class="metric">≈ 70 animales</div>
+          <p>La mayoría provenía de sus propias vacas, aunque a veces compraba novillos. El peso de venta recordado es de unos 370 kg; algunos animales se vendían antes, según la oportunidad.</p>
+          <p>El ciclo se estima en 16 meses. La alimentación se basaba en pasto y sal. La finca era propia y había un trabajador que vivía con la familia.</p>
+          <p class="muted">Lugar informado en la entrevista: finca Santa Lucía, en el Cauca. La ubicación exacta debe confirmarse.</p>
+        </article>
+        <article class="card">
+          <p class="smallcaps">2007</p><h3>El negocio de mi papá</h3>
+          <div class="metric">≈ 54 animales</div>
+          <p>Compraba animales de aproximadamente 200 kg y los vendía cerca de los 480 kg, después de unos 14 meses. Usaba pasto, pollinaza, sal, melaza y vitaminas.</p>
+          <p>El terreno era arrendado. Según su recuerdo, el arriendo costaba cerca de $540.000 mensuales. El comprador era un intermediario que trabajaba como pesador para el canal del frigorífico.</p>
+          <p class="muted">Lugar informado en la entrevista: Jamundí, sector Paso de la Bolsa.</p>
+        </article>
+      </div>
+      <h3>¿Qué diferencias aparecen?</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Dimensión</th><th>Abuelo · alrededor de 1960</th><th>Papá · 2007</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Origen del ganado</th><td>Principalmente cría propia; algunas compras ocasionales.</td><td>Compra de animales jóvenes de unos 200 kg.</td></tr>
+            <tr><th scope="row">Tierra</th><td>Finca propia; no se reportó pago de arriendo.</td><td>Terreno arrendado; arriendo recordado de $540.000 al mes.</td></tr>
+            <tr><th scope="row">Alimentación mencionada</th><td>Pasto y sal.</td><td>Pasto, pollinaza, sal, melaza y vitaminas.</td></tr>
+            <tr><th scope="row">Participación en ingreso familiar</th><td>Alrededor de 75%, según recuerdo familiar.</td><td>Alrededor de 38%, según recuerdo familiar.</td></tr>
+            <tr><th scope="row">Fin de la actividad</th><td>La familia recuerda problemas de seguridad y la venta de la finca y el ganado.</td><td>El negocio terminó en el contexto del traslado del padre a Bogotá y la dificultad de encontrar una finca cercana.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Las causas del cierre se presentan como recuerdos familiares; todavía falta contrastarlas con documentación independiente. La participación en el ingreso familiar tampoco proviene de estados financieros.</p>
+    </section>
+
+    <section id="graficas">
+      <p class="smallcaps">03 · Resultados preliminares</p>
+      <h2>Lo que muestran los datos familiares</h2>
+      <p>Las cuatro figuras resumen cantidades mencionadas en las entrevistas. Se muestran como comparaciones descriptivas y no como estimaciones estadísticas.</p>
+
+      <article class="chart-card">
+        <h3>1. Número aproximado de animales</h3><p class="chart-subtitle">Cabezas de ganado reportadas por entrevista</p>
+        <svg class="chart" viewBox="0 0 640 220" role="img" aria-labelledby="animals-title animals-desc">
+          <title id="animals-title">Número aproximado de animales</title><desc id="animals-desc">Abuelo: alrededor de 70 animales. Papá: alrededor de 54 animales.</desc>
+          <line class="axis" x1="160" y1="28" x2="160" y2="178"/><line class="axis" x1="160" y1="178" x2="590" y2="178"/>
+          <text x="10" y="72" font-size="15">Abuelo · c. 1960</text><rect class="bar-a" x="160" y="48" width="350" height="36" rx="4"/><text x="520" y="72" font-size="16" font-weight="700">≈ 70</text>
+          <text x="10" y="137" font-size="15">Papá · 2007</text><rect class="bar-b" x="160" y="113" width="270" height="36" rx="4"/><text x="440" y="137" font-size="16" font-weight="700">≈ 54</text>
+          <text x="160" y="202" font-size="12" fill="#5c6860">Escala visual proporcional a los valores reportados</text>
+        </svg>
+        <div class="legend"><span><i class="swatch" style="background:var(--green)"></i>Abuelo</span><span><i class="swatch" style="background:var(--gold)"></i>Papá</span></div>
+        <p class="muted">Ambas cifras son aproximadas y provienen de recuerdos familiares. No indican la cantidad de animales vendidos en un año.</p>
+      </article>
+
+      <article class="chart-card">
+        <h3>2. Peso de venta reportado</h3><p class="chart-subtitle">Kilogramos por animal; no es el peso inicial de ambos negocios</p>
+        <svg class="chart" viewBox="0 0 640 220" role="img" aria-labelledby="weight-title weight-desc">
+          <title id="weight-title">Peso de venta reportado</title><desc id="weight-desc">Abuelo: aproximadamente 370 kilogramos. Papá: aproximadamente 480 kilogramos.</desc>
+          <line class="axis" x1="160" y1="28" x2="160" y2="178"/><line class="axis" x1="160" y1="178" x2="590" y2="178"/>
+          <text x="10" y="72" font-size="15">Abuelo · c. 1960</text><rect class="bar-a" x="160" y="48" width="296" height="36" rx="4"/><text x="466" y="72" font-size="16" font-weight="700">≈ 370 kg</text>
+          <text x="10" y="137" font-size="15">Papá · 2007</text><rect class="bar-b" x="160" y="113" width="384" height="36" rx="4"/><text x="554" y="137" font-size="16" font-weight="700">≈ 480 kg</text>
+          <text x="160" y="202" font-size="12">Longitud de barras proporcional al peso</text>
+        </svg>
+        <p class="muted">En el caso del abuelo, algunos animales se vendían antes y con menos peso. No se conoce el peso inicial de sus animales, así que no se puede calcular su ganancia de peso.</p>
+      </article>
+
+      <article class="chart-card">
+        <h3>3. Duración aproximada del ciclo</h3><p class="chart-subtitle">Meses, según el recuerdo de cada entrevistado</p>
+        <svg class="chart" viewBox="0 0 640 220" role="img" aria-labelledby="cycle-title cycle-desc">
+          <title id="cycle-title">Duración aproximada del ciclo</title><desc id="cycle-desc">Abuelo: alrededor de 16 meses. Papá: alrededor de 14 meses.</desc>
+          <line class="axis" x1="160" y1="28" x2="160" y2="178"/><line class="axis" x1="160" y1="178" x2="590" y2="178"/>
+          <text x="10" y="72" font-size="15">Abuelo · c. 1960</text><rect class="bar-a" x="160" y="48" width="320" height="36" rx="4"/><text x="490" y="72" font-size="16" font-weight="700">≈ 16 meses</text>
+          <text x="10" y="137" font-size="15">Papá · 2007</text><rect class="bar-b" x="160" y="113" width="280" height="36" rx="4"/><text x="450" y="137" font-size="16" font-weight="700">≈ 14 meses</text>
+          <text x="160" y="202" font-size="12">Longitud de barras proporcional a la duración</text>
+        </svg>
+        <p class="muted">Son duraciones aproximadas. No implican que todos los animales permanecieran exactamente ese tiempo.</p>
+      </article>
+
+      <article class="chart-card">
+        <h3>4. Participación estimada en el ingreso familiar</h3><p class="chart-subtitle">Porcentaje recordado por la familia</p>
+        <svg class="chart" viewBox="0 0 640 220" role="img" aria-labelledby="income-title income-desc">
+          <title id="income-title">Participación estimada en el ingreso familiar</title><desc id="income-desc">Abuelo: alrededor de 75 por ciento. Papá: alrededor de 38 por ciento.</desc>
+          <line class="axis" x1="160" y1="28" x2="160" y2="178"/><line class="axis" x1="160" y1="178" x2="590" y2="178"/>
+          <text x="10" y="72" font-size="15">Abuelo · c. 1960</text><rect class="bar-a" x="160" y="48" width="375" height="36" rx="4"/><text x="545" y="72" font-size="16" font-weight="700">≈ 75%</text>
+          <text x="10" y="137" font-size="15">Papá · 2007</text><rect class="bar-b" x="160" y="113" width="190" height="36" rx="4"/><text x="360" y="137" font-size="16" font-weight="700">≈ 38%</text>
+          <text x="160" y="202" font-size="12">Escala de referencia: 0–86% (barra proporcional)</text>
+        </svg>
+        <p class="muted">Estos porcentajes son estimaciones retrospectivas, no participaciones calculadas con cuentas del hogar. Deben leerse con cautela y no como medidas exactas comparables.</p>
+      </article>
+    </section>
+
+    <section id="calculo">
+      <p class="smallcaps">04 · Cálculo propio</p>
+      <h2>Una estimación para el negocio de 2007</h2>
+      <p>Con los datos aproximados que recordó mi papá, los animales pasaban de unos 200 kg a unos 480 kg. La diferencia es de 280 kg por animal. Si se divide por un ciclo de 14 meses, el aumento promedio simple es de 20 kg al mes. Este cálculo no muestra la trayectoria real del peso mes a mes.</p>
+      <div class="equation">480 kg − 200 kg = 280 kg de diferencia · 280 kg ÷ 14 meses = 20 kg/mes</div>
+      <p>También se mencionó un precio aproximado de $3.300 por kg. Multiplicarlo por 480 kg produce una venta bruta teórica de $1.584.000 por animal:</p>
+      <div class="equation">480 kg × $3.300/kg = $1.584.000 por animal (estimación)</div>
+      <div class="note"><strong>Precaución importante.</strong> Mi papá también recordó ventas de alrededor de $1.200.000 a $1.500.000 por animal. Por eso, el cálculo de $1.584.000 no debe presentarse como una venta observada: el precio por kilo, el peso y el valor final son aproximados y no coinciden perfectamente. Además, una venta bruta no es utilidad; faltan costos completos para calcular ganancias.</div>
+      <p>Con la información actual no es posible estimar de forma confiable la rentabilidad total del negocio ni comparar sus ganancias con las de mi abuelo.</p>
+    </section>
+
+    <section id="contexto">
+      <p class="smallcaps">05 · Contexto histórico</p>
+      <h2>De la historia familiar a las series nacionales</h2>
+      <p>Para situar estas experiencias en un contexto más amplio, una fuente útil es el estudio de Gerson Javier Pérez Valbuena sobre los ciclos ganaderos en Colombia entre 1950 y 2001. El documento analiza variables como el inventario bovino, el sacrificio y la crianza a escala nacional. Su periodo termina en 2001, por lo que no cubre el año del negocio de mi papá (2007) y no sustituye datos específicos de Cauca o Jamundí.</p>
+      <p>El Censo Agropecuario de 1960 del DANE ofrece una referencia del tamaño del inventario bovino en ese año: reporta 331.903 cabezas para Cauca, 568.633 para Valle del Cauca y 9.640.196 para el total nacional. Estas cifras son contexto regional y nacional; no son directamente comparables con los cerca de 70 animales recordados para el negocio de mi abuelo, porque se refieren a territorios completos y no a una finca.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Territorio</th><th>Inventario bovino reportado en 1960</th><th>Cómo se usa aquí</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Cauca</th><td>331.903 cabezas</td><td>Referencia territorial; falta confirmar la ubicación exacta de la finca familiar.</td></tr>
+            <tr><th scope="row">Valle del Cauca</th><td>568.633 cabezas</td><td>Contexto regional adicional, no una medida del negocio familiar.</td></tr>
+            <tr><th scope="row">Colombia</th><td>9.640.196 cabezas</td><td>Escala nacional del inventario según el cuadro consultado del censo.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>El siguiente paso de la investigación es construir una serie histórica con fuentes oficiales, revisar si las definiciones y coberturas son comparables a lo largo del tiempo y añadir datos que permitan cubrir el periodo posterior a 2001. Hasta completar esa revisión, las gráficas de esta página describen los dos casos familiares, no una tendencia nacional.</p>
+    </section>
+
+    <section id="fuentes">
+      <p class="smallcaps">06 · Fuentes y método</p>
+      <h2>¿De dónde salen los datos?</h2>
+      <ul class="source-list">
+        <li><strong>Entrevista al abuelo.</strong> Recuerdo del negocio ganadero alrededor de 1960: escala, origen de los animales, peso de venta aproximado, duración del ciclo, alimentación y organización del trabajo. Los valores son retrospectivos y algunos detalles siguen sin confirmarse.</li>
+        <li><strong>Entrevista al padre.</strong> Recuerdo del negocio en Jamundí en 2007: número de animales, peso de compra y venta, duración del ciclo, alimentación, arriendo y precio aproximado. Las cifras de precio necesitan verificación adicional.</li>
+        <li><strong>Pérez Valbuena, G. J. (2004).</strong> <em>Los ciclos ganaderos en Colombia, 1950-2001</em>. Banco de la República, Documento de Trabajo sobre Economía Regional y Urbana n.º 46. <a href="https://www.banrep.gov.co/es/ciclos-ganaderos-colombia-1950-2001" target="_blank" rel="noopener noreferrer">Página del documento</a> · <a href="https://www.banrep.gov.co/sites/default/files/publicaciones/archivos/DTSER-46.pdf" target="_blank" rel="noopener noreferrer">PDF</a>.</li>
+        <li><strong>DANE (censo agropecuario de 1960).</strong> <em>Segundo Censo Nacional Agropecuario</em>, tablas históricas de inventario bovino. <a href="https://biblioteca.dane.gov.co/media/libros/LD_1050_1960_1962_EJ_6.PDF" target="_blank" rel="noopener noreferrer">Consultar el documento</a>.</li>
+      </ul>
+      <div class="softnote"><strong>Nota de método.</strong> Las gráficas se elaboraron a partir de los valores aproximados reportados por la familia. Los cálculos derivados están identificados como estimaciones. Las cifras del DANE se mantienen separadas de los datos familiares porque tienen otra escala geográfica y otra fuente. No se imputaron valores faltantes ni se inventaron observaciones para años sin datos.</div>
+      <h3>Conclusión provisional</h3>
+      <p>La comparación inicial sugiere diferencias en la organización de los dos negocios: la cría propia y la tierra de propiedad familiar tuvieron importancia en el caso del abuelo; la compra de animales jóvenes y el arriendo de tierra caracterizaron el caso del padre. La participación estimada de la ganadería en los ingresos familiares también parece haber sido menor en la segunda experiencia, aunque esos porcentajes deben verificarse. El análisis de fuentes históricas ayudará a establecer qué aspectos se relacionan con cambios más amplios del sector y cuáles corresponden a las circunstancias particulares de la familia.</p>
+    </section>
+  </main>
+</body>
+</html>
